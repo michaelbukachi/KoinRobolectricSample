@@ -14,12 +14,7 @@ import org.robolectric.annotation.Config
 @Config(application = KoinTestApp::class, sdk = [28])
 class MainActivityTest {
 
-    lateinit var app: KoinTestApp
-
-    @Before
-    fun setup() {
-        app = ApplicationProvider.getApplicationContext()
-    }
+    val app: KoinTestApp = ApplicationProvider.getApplicationContext()
 
     @Test
     fun testServiceStatus_isFetched() {
